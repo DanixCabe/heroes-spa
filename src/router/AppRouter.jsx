@@ -1,5 +1,5 @@
 
-import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Navigate, RouterProvider, createBrowserRouter, createHashRouter } from "react-router-dom";
 import { HeroesApp } from "../HeroesApp";
 import { ErrorPage } from "../ErrorPage";
 
@@ -10,7 +10,7 @@ import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
 
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/login",
         element: <PublicRoute >
@@ -27,6 +27,7 @@ const router = createBrowserRouter([
     },
 
 ]);
+
 
 export const AppRouter = () => {
     return (
