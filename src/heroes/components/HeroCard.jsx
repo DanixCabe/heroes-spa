@@ -4,7 +4,7 @@ export const HeroCard = ({ hero }) => {
 
     const { id, superhero, publisher, alter_ego, first_appearance, characters} = hero
 
-    const heroImageUrl = `/images/heroes/${id}.jpg`
+    const heroImageUrl = `./images/heroes/${id}.jpg`
     const newCharacers = characters.split(',').filter(character => character != alter_ego).map( (chars) => chars ).join()
     
     const charactersByHero =  <p className="mb-2 text-xs">{newCharacers}</p>
