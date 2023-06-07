@@ -20,6 +20,10 @@ export const ChildHeroesRoutes = [
         element: <Hero />,
     },
     {
+        path: '/',
+        element: <Navigate to="marvel"/>
+    },
+    {
         path: '/*',
         element: <Navigate to="marvel"/>
     },
